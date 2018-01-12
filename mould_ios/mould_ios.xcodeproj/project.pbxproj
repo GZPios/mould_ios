@@ -80,6 +80,14 @@
 		18BEC9052007368A0092E15C /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC9042007368A0092E15C /* NetWorkManager.m */; };
 		18BEC90D20075C120092E15C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BEC90B20075C120092E15C /* AVKit.framework */; };
 		18BEC90E20075C120092E15C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BEC90C20075C120092E15C /* AVFoundation.framework */; };
+		18CE543120088F76009466A4 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542520088F76009466A4 /* SDCycleScrollView.m */; };
+		18CE543220088F76009466A4 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542620088F76009466A4 /* UIView+SDExtension.m */; };
+		18CE543320088F76009466A4 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542720088F76009466A4 /* SDCollectionViewCell.m */; };
+		18CE543420088F76009466A4 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542A20088F76009466A4 /* TADotView.m */; };
+		18CE543520088F76009466A4 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542B20088F76009466A4 /* TAPageControl.m */; };
+		18CE543620088F76009466A4 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542C20088F76009466A4 /* TAAnimatedDotView.m */; };
+		18CE543720088F76009466A4 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542D20088F76009466A4 /* TAAbstractDotView.m */; };
+		18CE543A200891AE009466A4 /* HomeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5439200891AE009466A4 /* HomeHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -231,9 +239,25 @@
 		18BEC8FE20071B7E0092E15C /* happy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = happy.gif; sourceTree = "<group>"; };
 		18BEC9032007368A0092E15C /* NetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
 		18BEC9042007368A0092E15C /* NetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
-		18BEC909200755AE0092E15C /* cont-1249893-11405096-hd.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cont-1249893-11405096-hd.mp4"; sourceTree = "<group>"; };
 		18BEC90B20075C120092E15C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		18BEC90C20075C120092E15C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		18CE542220088F76009466A4 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		18CE542320088F76009466A4 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		18CE542420088F76009466A4 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		18CE542520088F76009466A4 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		18CE542620088F76009466A4 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		18CE542720088F76009466A4 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		18CE542920088F76009466A4 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		18CE542A20088F76009466A4 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		18CE542B20088F76009466A4 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		18CE542C20088F76009466A4 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		18CE542D20088F76009466A4 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		18CE542E20088F76009466A4 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		18CE542F20088F76009466A4 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		18CE543020088F76009466A4 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		18CE5438200891AE009466A4 /* HomeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHandler.h; sourceTree = "<group>"; };
+		18CE5439200891AE009466A4 /* HomeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHandler.m; sourceTree = "<group>"; };
+		18CE543B200896AF009466A4 /* API+Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API+Network.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +276,6 @@
 		18BEC7DD2006EBBB0092E15C = {
 			isa = PBXGroup;
 			children = (
-				18BEC909200755AE0092E15C /* cont-1249893-11405096-hd.mp4 */,
 				18BEC7E82006EBBC0092E15C /* mould_ios */,
 				18BEC7E72006EBBC0092E15C /* Products */,
 				18BEC90A20075C110092E15C /* Frameworks */,
@@ -311,6 +334,8 @@
 		18BEC8012006F54D0092E15C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				18CE5438200891AE009466A4 /* HomeHandler.h */,
+				18CE5439200891AE009466A4 /* HomeHandler.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -457,6 +482,7 @@
 		18BEC8132006F54D0092E15C /* Macros */ = {
 			isa = PBXGroup;
 			children = (
+				18CE543B200896AF009466A4 /* API+Network.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -550,6 +576,7 @@
 		18BEC81F2006F54E0092E15C /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				18CE542120088F76009466A4 /* SDCycleScrollView */,
 				18BEC8202006F54E0092E15C /* MJRefresh */,
 				18BEC84D2006F54E0092E15C /* Masonry */,
 				18BEC8682006F54E0092E15C /* UIKit+AFNetworking */,
@@ -790,6 +817,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		18CE542120088F76009466A4 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				18CE542220088F76009466A4 /* UIView+SDExtension.h */,
+				18CE542320088F76009466A4 /* SDCycleScrollView.h */,
+				18CE542420088F76009466A4 /* SDCollectionViewCell.h */,
+				18CE542520088F76009466A4 /* SDCycleScrollView.m */,
+				18CE542620088F76009466A4 /* UIView+SDExtension.m */,
+				18CE542720088F76009466A4 /* SDCollectionViewCell.m */,
+				18CE542820088F76009466A4 /* PageControl */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		18CE542820088F76009466A4 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				18CE542920088F76009466A4 /* TAAbstractDotView.h */,
+				18CE542A20088F76009466A4 /* TADotView.m */,
+				18CE542B20088F76009466A4 /* TAPageControl.m */,
+				18CE542C20088F76009466A4 /* TAAnimatedDotView.m */,
+				18CE542D20088F76009466A4 /* TAAbstractDotView.m */,
+				18CE542E20088F76009466A4 /* TADotView.h */,
+				18CE542F20088F76009466A4 /* TAAnimatedDotView.h */,
+				18CE543020088F76009466A4 /* TAPageControl.h */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -871,12 +927,15 @@
 				18BEC8B22006F54E0092E15C /* MJRefreshBackGifFooter.m in Sources */,
 				18BEC8D62006F54E0092E15C /* AFURLSessionManager.m in Sources */,
 				18BEC8CC2006F54E0092E15C /* UIRefreshControl+AFNetworking.m in Sources */,
+				18CE543620088F76009466A4 /* TAAnimatedDotView.m in Sources */,
 				18BEC8C22006F54E0092E15C /* MASCompositeConstraint.m in Sources */,
 				18BEC8DD2006F54E0092E15C /* SDWebImageDecoder.m in Sources */,
 				18BEC8C52006F54E0092E15C /* NSArray+MASAdditions.m in Sources */,
+				18CE543120088F76009466A4 /* SDCycleScrollView.m in Sources */,
 				18BEC8D02006F54E0092E15C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				18BEC8FB20070BC10092E15C /* AdvertiseViewController.m in Sources */,
 				18BEC8BB2006F54E0092E15C /* MJRefreshFooter.m in Sources */,
+				18CE543220088F76009466A4 /* UIView+SDExtension.m in Sources */,
 				18BEC8C92006F54E0092E15C /* MASViewAttribute.m in Sources */,
 				18BEC8DA2006F54E0092E15C /* UIImage+WebP.m in Sources */,
 				18BEC8D22006F54E0092E15C /* AFAutoPurgingImageCache.m in Sources */,
@@ -884,16 +943,19 @@
 				18BEC8B62006F54E0092E15C /* MJRefreshAutoGifFooter.m in Sources */,
 				18BEC8E92006F54E0092E15C /* UIButton+WebCache.m in Sources */,
 				18BEC8C32006F54E0092E15C /* MASConstraintMaker.m in Sources */,
+				18CE543720088F76009466A4 /* TAAbstractDotView.m in Sources */,
 				18BEC8AE2006F54E0092E15C /* MJRefreshConst.m in Sources */,
 				18BEC8DE2006F54E0092E15C /* UIImageView+HighlightedWebCache.m in Sources */,
 				18BEC8D42006F54E0092E15C /* AFURLResponseSerialization.m in Sources */,
 				18BEC8C62006F54E0092E15C /* View+MASAdditions.m in Sources */,
 				18BEC8CB2006F54E0092E15C /* UIProgressView+AFNetworking.m in Sources */,
 				18BEC8BA2006F54E0092E15C /* MJRefreshGifHeader.m in Sources */,
+				18CE543420088F76009466A4 /* TADotView.m in Sources */,
 				18BEC8B82006F54E0092E15C /* MJRefreshNormalHeader.m in Sources */,
 				18BEC8CF2006F54E0092E15C /* UIButton+AFNetworking.m in Sources */,
 				18BEC8E72006F54E0092E15C /* UIImageView+WebCache.m in Sources */,
 				18BEC8BD2006F54E0092E15C /* MJRefreshBackFooter.m in Sources */,
+				18CE543520088F76009466A4 /* TAPageControl.m in Sources */,
 				18BEC8E02006F54E0092E15C /* UIImage+GIF.m in Sources */,
 				18BEC8C72006F54E0092E15C /* MASConstraint.m in Sources */,
 				18BEC8E12006F54E0092E15C /* UIImage+MultiFormat.m in Sources */,
@@ -902,6 +964,7 @@
 				18BEC8E22006F54E0092E15C /* SDWebImageCompat.m in Sources */,
 				18BEC8BE2006F54E0092E15C /* MJRefreshAutoFooter.m in Sources */,
 				18BEC8B12006F54E0092E15C /* UIView+MJExtension.m in Sources */,
+				18CE543320088F76009466A4 /* SDCollectionViewCell.m in Sources */,
 				18BEC8F12007059E0092E15C /* BaseTabBarCtrl.m in Sources */,
 				18BEC8D12006F54E0092E15C /* UIWebView+AFNetworking.m in Sources */,
 				18BEC8B72006F54E0092E15C /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -911,6 +974,7 @@
 				18BEC8B32006F54E0092E15C /* MJRefreshBackStateFooter.m in Sources */,
 				18BEC8D32006F54E0092E15C /* AFImageDownloader.m in Sources */,
 				18BEC8E32006F54E0092E15C /* SDWebImagePrefetcher.m in Sources */,
+				18CE543A200891AE009466A4 /* HomeHandler.m in Sources */,
 				18BEC9052007368A0092E15C /* NetWorkManager.m in Sources */,
 				18BEC8C42006F54E0092E15C /* MASLayoutConstraint.m in Sources */,
 				18BEC8BC2006F54E0092E15C /* MJRefreshHeader.m in Sources */,

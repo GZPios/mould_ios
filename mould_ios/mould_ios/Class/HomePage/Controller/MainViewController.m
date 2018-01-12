@@ -7,11 +7,16 @@
 //
 
 #import "MainViewController.h"
-#import <AVFoundation/AVFoundation.h>
-#import <AVKit/AVKit.h>
-@interface MainViewController ()
+#import "MJRefresh.h"
+#import "SDCycleScrollView.h"
+#import "HomeHandler.h"
 
-@property(nonatomic , strong)AVPlayerViewController *aVPlayerViewController;
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+
+@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
+
+@property(nonatomic, strong)SDCycleScrollView *cycleScrollView;
+@property(nonatomic, strong)UITableView *tableView;
 
 @end
 
@@ -19,63 +24,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-    
-//    NSURL *movieUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"cont-1249893-11405096-hd" ofType:@"mp4"]];
-    
-//    NSURL *movieUrl = [NSURL URLWithString:@"https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0531v7tzxt&auto=0"];
-//    NSURL *movieUrl = [NSURL URLWithString:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
-   
-//  NSString *path = [[NSBundle mainBundle] pathForResource:@"happy" ofType:@"gif"];
-//    NSString *loc = [[NSBundle mainBundle] pathForResource:@"cont-1249893-11405096-hd" ofType:@"mp4"];
-/**
-    AVPlayer *player = [AVPlayer playerWithURL:movieUrl];
+    self.title = @"首页";
+    [self requestMainData];
+}
 
-    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
+-(void)requestMainData{
+    [HomeHandler requestHomePageInfoWithSuccess:^(id obj) {
+        NSLog(@"%@",obj);
+        
+        [self.tableView reloadData];
+        _cycleScrollView.imageURLStringsGroup = obj;
+    } failed:^(id obj) {
+        
+    }];
+}
 
-    playerLayer.frame = CGRectMake(10, 30, self.view.bounds.size.width - 20, 200);
+-(UITableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,64, self.view.bounds.size.width, self.view.bounds.size.height-64-49) style:UITableViewStyleGrouped];
+        [self.view addSubview:_tableView];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.backgroundColor = [UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1];
+        _tableView.estimatedRowHeight = 2;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+          
+        }];
+        _tableView.sectionHeaderHeight = 0;
+        _tableView.sectionFooterHeight = 0;
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenWidth, 145) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+        _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
+        _cycleScrollView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
+        _tableView.tableHeaderView = _cycleScrollView;
+    }
+    return _tableView;
+}
 
-    playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
 
-    [self.view.layer addSublayer:playerLayer];
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    return cell;
+}
 
-    [player play];
-*/
-    
-    
-//     self.aVPlayerViewController = [[AVPlayerViewController alloc]init];
-//     self.aVPlayerViewController.player = [[AVPlayer alloc]initWithURL:path];
-//     [self addChildViewController:self.aVPlayerViewController];
-//     self.aVPlayerViewController.view.frame = self.view.frame;
-//     self.aVPlayerViewController.view.translatesAutoresizingMaskIntoConstraints = true;
-//     [self.view addSubview:self.aVPlayerViewController.view];
-//     [self.aVPlayerViewController.player play];
-
-
-/**
-    NSURL *url =[[NSURL alloc] initWithString:@"http://w2.dwstatic.com/1/5/1525/127352-100-1434554639.mp4"];
-    UIWebView *myWeb = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [myWeb loadRequest:request];
-    [self.view addSubview:myWeb];
-*/
+-(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

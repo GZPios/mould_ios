@@ -7,8 +7,7 @@
 //
 
 #import "NetWorkManager.h"
-
-#define Host               @""
+#import "API+Network.h"
 
 @implementation NetWorkManager
 
