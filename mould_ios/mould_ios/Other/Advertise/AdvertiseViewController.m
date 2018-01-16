@@ -67,7 +67,7 @@
             });
         }
     } withFailed:^(id json) {
-        NSLog(@"%@",json);
+        [self goToHomePage];
     }];
 }
 
@@ -102,9 +102,7 @@
 
 -(void)didBtn:(UIButton *)sender{
     if ([sender.titleLabel.text isEqualToString:@"跳过"]) {
-        BaseTabBarCtrl *base = [BaseTabBarCtrl new];
-        [UIApplication sharedApplication].keyWindow.rootViewController = base;
-        [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+        [self goToHomePage];
     }
 }
 
@@ -128,12 +126,11 @@
     [timer invalidate];
 }
 
-
-
-
-
-
-
+-(void)goToHomePage{
+    BaseTabBarCtrl *base = [BaseTabBarCtrl new];
+    [UIApplication sharedApplication].keyWindow.rootViewController = base;
+    [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+}
 
 
 @end

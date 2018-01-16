@@ -65,6 +65,8 @@
                     failed(@"找不到服务器");
                 }else if(error.code == 3840){
                     failed(@"3840");
+                }else{
+                    failed(@"错误");
                 }
             }];
         }

@@ -9,6 +9,7 @@
 #import "HomeHandler.h"
 #import "NetWorkManager.h"
 #import "API+Network.h"
+#import "BannerModel.h"
 
 @implementation HomeHandler
 
@@ -16,21 +17,26 @@
     
     [[NetWorkManager shareManager]postRequestWithUrlString:API_HomePage withParametes:nil withSuccess:^(id json) {
         NSMutableArray *bannerImgs = [NSMutableArray array];
-       
-        [json[@"banner"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSMutableArray *banners = [NSMutableArray array];
+        
+        NSMutableDictionary *pageInfoDic = [NSMutableDictionary dictionary];
+        
+        NSLog(@"%@",json);
+        
+        [json[@"banner"] enumerateObjectsUsingBlock:^(NSMutableDictionary* obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [bannerImgs addObject:obj[@"img"]];
-            
+            BannerModel *model = [[BannerModel alloc]initWithData:obj];
+            [banners addObject:model];
         }];
         
-        NSLog(@"%@",bannerImgs);
-        success(bannerImgs);
+        [pageInfoDic setObject:bannerImgs forKey:@"bannerImgs"];
+        [pageInfoDic setObject:banners forKey:@"bannerModel"];
+        success(pageInfoDic);
+        
     } withFailed:^(id json) {
         
         failed(json);
     }];
 }
-
-
-
 
 @end

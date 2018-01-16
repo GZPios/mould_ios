@@ -11,29 +11,43 @@
 #import "SDCycleScrollView.h"
 #import "HomeHandler.h"
 
+#import "BannerModel.h"
+#import "BaseWebViewController.h"
+
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
+{
+    BannerModel *bannerModel;
+}
 
 @property(nonatomic, strong)SDCycleScrollView *cycleScrollView;
+
 @property(nonatomic, strong)UITableView *tableView;
+
+@property(nonatomic, copy)NSMutableArray *banners;
+
+@property(nonatomic, copy)NSMutableDictionary *pageDatas;
+
 
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
+    
+
     [super viewDidLoad];
-    self.title = @"首页";
+    _banners = [NSMutableArray array];
     [self requestMainData];
 }
 
 -(void)requestMainData{
     [HomeHandler requestHomePageInfoWithSuccess:^(id obj) {
         NSLog(@"%@",obj);
-        
+        self.pageDatas = obj;
         [self.tableView reloadData];
-        _cycleScrollView.imageURLStringsGroup = obj;
+        _cycleScrollView.imageURLStringsGroup = obj[@"bannerImgs"];
     } failed:^(id obj) {
         
     }];
@@ -71,10 +85,27 @@
 }
 
 -(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    bannerModel = self.pageDatas[@"bannerModel"][index];
     
-    
+    if ([bannerModel.type isEqualToString:@"url"]) {
+        [self pushWebView];
+    }else{
+        
+    }
 }
 
+-(void)pushWebView{
+    BaseWebViewController *webView = [BaseWebViewController new];
+    webView.url = bannerModel.url;
+    [self.navigationController pushViewController:webView animated:YES];
+}
+
+-(NSMutableDictionary *)pageDatas{
+    if (!_pageDatas) {
+        _pageDatas = [NSMutableDictionary dictionary];
+    }
+    return _pageDatas;
+}
 
 
 @end

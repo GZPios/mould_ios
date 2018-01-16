@@ -22,15 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    
-    
-    
-    
-    
     //设置启动页掩饰：2秒
-    [NSThread sleepForTimeInterval:2];
     
+    [NSThread sleepForTimeInterval:2];
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     

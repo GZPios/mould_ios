@@ -88,6 +88,16 @@
 		18CE543620088F76009466A4 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542C20088F76009466A4 /* TAAnimatedDotView.m */; };
 		18CE543720088F76009466A4 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE542D20088F76009466A4 /* TAAbstractDotView.m */; };
 		18CE543A200891AE009466A4 /* HomeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5439200891AE009466A4 /* HomeHandler.m */; };
+		18CE5440200DC889009466A4 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE543F200DC889009466A4 /* BaseWebViewController.m */; };
+		18CE5443200DCDC3009466A4 /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5442200DCDC3009466A4 /* BannerModel.m */; };
+		18CE5446200DDA4D009466A4 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5445200DDA4D009466A4 /* MeViewController.m */; };
+		18CE5449200DDA73009466A4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5448200DDA73009466A4 /* BaseViewController.m */; };
+		18CE544C200DDB08009466A4 /* BaseNavCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE544B200DDB08009466A4 /* BaseNavCtrl.m */; };
+		18CE5462200DE603009466A4 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5461200DE603009466A4 /* OneViewController.m */; };
+		18CE5465200DE61C009466A4 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5464200DE61C009466A4 /* TwoViewController.m */; };
+		18CE546D200DF611009466A4 /* YQLWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5468200DF611009466A4 /* YQLWebView.m */; };
+		18CE546E200DF611009466A4 /* YQLWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE546A200DF611009466A4 /* YQLWebViewProgressView.m */; };
+		18CE546F200DF611009466A4 /* YQLWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE546C200DF611009466A4 /* YQLWebViewProgress.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -258,6 +268,26 @@
 		18CE5438200891AE009466A4 /* HomeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHandler.h; sourceTree = "<group>"; };
 		18CE5439200891AE009466A4 /* HomeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHandler.m; sourceTree = "<group>"; };
 		18CE543B200896AF009466A4 /* API+Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API+Network.h"; sourceTree = "<group>"; };
+		18CE543E200DC889009466A4 /* BaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
+		18CE543F200DC889009466A4 /* BaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		18CE5441200DCDC3009466A4 /* BannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
+		18CE5442200DCDC3009466A4 /* BannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
+		18CE5444200DDA4D009466A4 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		18CE5445200DDA4D009466A4 /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		18CE5447200DDA73009466A4 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		18CE5448200DDA73009466A4 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		18CE544A200DDB08009466A4 /* BaseNavCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavCtrl.h; sourceTree = "<group>"; };
+		18CE544B200DDB08009466A4 /* BaseNavCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavCtrl.m; sourceTree = "<group>"; };
+		18CE5460200DE603009466A4 /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		18CE5461200DE603009466A4 /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		18CE5463200DE61C009466A4 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		18CE5464200DE61C009466A4 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		18CE5467200DF611009466A4 /* YQLWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLWebViewProgressView.h; sourceTree = "<group>"; };
+		18CE5468200DF611009466A4 /* YQLWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLWebView.m; sourceTree = "<group>"; };
+		18CE5469200DF611009466A4 /* YQLWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLWebViewProgress.h; sourceTree = "<group>"; };
+		18CE546A200DF611009466A4 /* YQLWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLWebViewProgressView.m; sourceTree = "<group>"; };
+		18CE546B200DF611009466A4 /* YQLWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLWebView.h; sourceTree = "<group>"; };
+		18CE546C200DF611009466A4 /* YQLWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLWebViewProgress.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +344,8 @@
 		18BEC7FF2006F54D0092E15C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				18CE5450200DE494009466A4 /* Other1 */,
+				18CE5455200DE495009466A4 /* Other2 */,
 				18BEC8002006F54D0092E15C /* HomePage */,
 				18BEC8052006F54D0092E15C /* Me */,
 			);
@@ -352,6 +384,8 @@
 		18BEC8032006F54D0092E15C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18CE5441200DCDC3009466A4 /* BannerModel.h */,
+				18CE5442200DCDC3009466A4 /* BannerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,6 +418,8 @@
 		18BEC8072006F54D0092E15C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18CE5444200DDA4D009466A4 /* MeViewController.h */,
+				18CE5445200DDA4D009466A4 /* MeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,8 +452,6 @@
 		18BEC80B2006F54D0092E15C /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				18BEC8EF2007059E0092E15C /* BaseTabBarCtrl.h */,
-				18BEC8F02007059E0092E15C /* BaseTabBarCtrl.m */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -499,6 +533,14 @@
 		18BEC8152006F54D0092E15C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				18CE543E200DC889009466A4 /* BaseWebViewController.h */,
+				18CE543F200DC889009466A4 /* BaseWebViewController.m */,
+				18CE5447200DDA73009466A4 /* BaseViewController.h */,
+				18CE5448200DDA73009466A4 /* BaseViewController.m */,
+				18CE544A200DDB08009466A4 /* BaseNavCtrl.h */,
+				18CE544B200DDB08009466A4 /* BaseNavCtrl.m */,
+				18BEC8EF2007059E0092E15C /* BaseTabBarCtrl.h */,
+				18BEC8F02007059E0092E15C /* BaseTabBarCtrl.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -576,6 +618,7 @@
 		18BEC81F2006F54E0092E15C /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				18CE5466200DF611009466A4 /* YQLWebViewProgress */,
 				18CE542120088F76009466A4 /* SDCycleScrollView */,
 				18BEC8202006F54E0092E15C /* MJRefresh */,
 				18BEC84D2006F54E0092E15C /* Masonry */,
@@ -846,6 +889,101 @@
 			path = PageControl;
 			sourceTree = "<group>";
 		};
+		18CE5450200DE494009466A4 /* Other1 */ = {
+			isa = PBXGroup;
+			children = (
+				18CE5451200DE494009466A4 /* Other */,
+				18CE5452200DE494009466A4 /* Controller */,
+				18CE5453200DE494009466A4 /* Model */,
+				18CE5454200DE494009466A4 /* View */,
+			);
+			path = Other1;
+			sourceTree = "<group>";
+		};
+		18CE5451200DE494009466A4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		18CE5452200DE494009466A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18CE5460200DE603009466A4 /* OneViewController.h */,
+				18CE5461200DE603009466A4 /* OneViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18CE5453200DE494009466A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18CE5454200DE494009466A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18CE5455200DE495009466A4 /* Other2 */ = {
+			isa = PBXGroup;
+			children = (
+				18CE5456200DE495009466A4 /* Other */,
+				18CE5457200DE495009466A4 /* Controller */,
+				18CE5458200DE495009466A4 /* Model */,
+				18CE5459200DE495009466A4 /* View */,
+			);
+			path = Other2;
+			sourceTree = "<group>";
+		};
+		18CE5456200DE495009466A4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		18CE5457200DE495009466A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18CE5463200DE61C009466A4 /* TwoViewController.h */,
+				18CE5464200DE61C009466A4 /* TwoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18CE5458200DE495009466A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18CE5459200DE495009466A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18CE5466200DF611009466A4 /* YQLWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				18CE5467200DF611009466A4 /* YQLWebViewProgressView.h */,
+				18CE5468200DF611009466A4 /* YQLWebView.m */,
+				18CE5469200DF611009466A4 /* YQLWebViewProgress.h */,
+				18CE546A200DF611009466A4 /* YQLWebViewProgressView.m */,
+				18CE546B200DF611009466A4 /* YQLWebView.h */,
+				18CE546C200DF611009466A4 /* YQLWebViewProgress.m */,
+			);
+			path = YQLWebViewProgress;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -928,11 +1066,14 @@
 				18BEC8D62006F54E0092E15C /* AFURLSessionManager.m in Sources */,
 				18BEC8CC2006F54E0092E15C /* UIRefreshControl+AFNetworking.m in Sources */,
 				18CE543620088F76009466A4 /* TAAnimatedDotView.m in Sources */,
+				18CE5446200DDA4D009466A4 /* MeViewController.m in Sources */,
 				18BEC8C22006F54E0092E15C /* MASCompositeConstraint.m in Sources */,
+				18CE546F200DF611009466A4 /* YQLWebViewProgress.m in Sources */,
 				18BEC8DD2006F54E0092E15C /* SDWebImageDecoder.m in Sources */,
 				18BEC8C52006F54E0092E15C /* NSArray+MASAdditions.m in Sources */,
 				18CE543120088F76009466A4 /* SDCycleScrollView.m in Sources */,
 				18BEC8D02006F54E0092E15C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				18CE5465200DE61C009466A4 /* TwoViewController.m in Sources */,
 				18BEC8FB20070BC10092E15C /* AdvertiseViewController.m in Sources */,
 				18BEC8BB2006F54E0092E15C /* MJRefreshFooter.m in Sources */,
 				18CE543220088F76009466A4 /* UIView+SDExtension.m in Sources */,
@@ -951,6 +1092,7 @@
 				18BEC8CB2006F54E0092E15C /* UIProgressView+AFNetworking.m in Sources */,
 				18BEC8BA2006F54E0092E15C /* MJRefreshGifHeader.m in Sources */,
 				18CE543420088F76009466A4 /* TADotView.m in Sources */,
+				18CE546D200DF611009466A4 /* YQLWebView.m in Sources */,
 				18BEC8B82006F54E0092E15C /* MJRefreshNormalHeader.m in Sources */,
 				18BEC8CF2006F54E0092E15C /* UIButton+AFNetworking.m in Sources */,
 				18BEC8E72006F54E0092E15C /* UIImageView+WebCache.m in Sources */,
@@ -979,6 +1121,7 @@
 				18BEC8C42006F54E0092E15C /* MASLayoutConstraint.m in Sources */,
 				18BEC8BC2006F54E0092E15C /* MJRefreshHeader.m in Sources */,
 				18BEC8CD2006F54E0092E15C /* AFNetworkActivityIndicatorManager.m in Sources */,
+				18CE5449200DDA73009466A4 /* BaseViewController.m in Sources */,
 				18BEC8D52006F54E0092E15C /* AFHTTPSessionManager.m in Sources */,
 				18BEC8F82007093B0092E15C /* Tools.m in Sources */,
 				18BEC8C12006F54E0092E15C /* ViewController+MASAdditions.m in Sources */,
@@ -986,12 +1129,17 @@
 				18BEC7EB2006EBBC0092E15C /* AppDelegate.m in Sources */,
 				18BEC8DB2006F54E0092E15C /* MKAnnotationView+WebCache.m in Sources */,
 				18BEC8E82006F54E0092E15C /* UIView+WebCacheOperation.m in Sources */,
+				18CE5443200DCDC3009466A4 /* BannerModel.m in Sources */,
 				18BEC8DF2006F54E0092E15C /* SDWebImageDownloader.m in Sources */,
 				18BEC8B42006F54E0092E15C /* MJRefreshBackNormalFooter.m in Sources */,
 				18BEC8AD2006F54E0092E15C /* UIScrollView+MJRefresh.m in Sources */,
+				18CE544C200DDB08009466A4 /* BaseNavCtrl.m in Sources */,
+				18CE5462200DE603009466A4 /* OneViewController.m in Sources */,
+				18CE546E200DF611009466A4 /* YQLWebViewProgressView.m in Sources */,
 				18BEC8D82006F54E0092E15C /* AFNetworkReachabilityManager.m in Sources */,
 				18BEC8B02006F54E0092E15C /* UIScrollView+MJExtension.m in Sources */,
 				18BEC8E62006F54E0092E15C /* NSData+ImageContentType.m in Sources */,
+				18CE5440200DC889009466A4 /* BaseWebViewController.m in Sources */,
 				18BEC8E42006F54E0092E15C /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
