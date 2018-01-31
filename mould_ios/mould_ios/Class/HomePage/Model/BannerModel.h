@@ -17,6 +17,6 @@
 @property(nonatomic,copy)NSString *img;
 
 
--(instancetype)initWithData:(NSMutableDictionary *)dic;
 
+-(instancetype)initWithData:(NSMutableDictionary *)dic;
 @end

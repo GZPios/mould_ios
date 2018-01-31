@@ -12,8 +12,5 @@
 
 + (BOOL)isFirstEntryApp;
 
-
-
-
-
++ (NSArray *)arrayByPlistWthFileName:(NSString *)name;
 @end

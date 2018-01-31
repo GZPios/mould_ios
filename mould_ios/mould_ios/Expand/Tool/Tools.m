@@ -20,7 +20,10 @@
 }
 
 
-
++(NSArray *)arrayByPlistWthFileName:(NSString *)name{
+    NSString *plistPath = [[NSBundle mainBundle]pathForResource:name ofType:@"plist"];
+    return [[NSArray alloc]initWithContentsOfFile:plistPath];
+}
 
 
 

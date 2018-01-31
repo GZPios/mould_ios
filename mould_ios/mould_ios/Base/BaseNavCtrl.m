@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+    self.navigationBar.tintColor = [UIColor blackColor];
 }
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{

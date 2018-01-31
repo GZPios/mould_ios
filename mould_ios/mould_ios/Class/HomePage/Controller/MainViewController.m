@@ -14,8 +14,6 @@
 #import "BannerModel.h"
 #import "BaseWebViewController.h"
 
-#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
-
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 {
     BannerModel *bannerModel;
@@ -67,7 +65,7 @@
         }];
         _tableView.sectionHeaderHeight = 0;
         _tableView.sectionFooterHeight = 0;
-        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenWidth, 145) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenwidth, 145) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
         _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
         _cycleScrollView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
         _tableView.tableHeaderView = _cycleScrollView;
@@ -86,7 +84,6 @@
 
 -(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     bannerModel = self.pageDatas[@"bannerModel"][index];
-    
     if ([bannerModel.type isEqualToString:@"url"]) {
         [self pushWebView];
     }else{

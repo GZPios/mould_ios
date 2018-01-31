@@ -12,7 +12,9 @@
 #import "AdvertiseViewController.h"
 
 #import "Tools.h"
+#import "LoginViewController.h"
 
+#import "TwoViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -28,8 +30,14 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    [self settingHUD];
+    
     if (![Tools isFirstEntryApp]) {
-        self.window.rootViewController = [AdvertiseViewController new];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController: [TwoViewController new]];
+        self.window.rootViewController = nav;
+
+        
+//        self.window.rootViewController = [TwoViewController new];
     }else{
          self.window.rootViewController = [[BaseTabBarCtrl alloc]init];
     }
@@ -39,6 +47,10 @@
     return YES;
 }
 
+-(void)settingHUD{
+    [SVProgressHUD  setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

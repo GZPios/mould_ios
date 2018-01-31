@@ -60,7 +60,7 @@
     _webView.backgroundColor = [UIColor whiteColor];
     _webView.UIDelegate = self;
     _webView.navigationDelegate = self;
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.gftbankqwe.cn"]]];
     [self.view addSubview:self.webView];
 }
 
@@ -77,6 +77,19 @@
      [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
     NSLog(@"webview,delloc");
 }
+
+
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(nonnull WKNavigationResponse *)navigationResponse decisionHandler:(nonnull void (^)(WKNavigationResponsePolicy))decisionHandler{
+    if (((NSHTTPURLResponse *)navigationResponse.response).statusCode == 200) {
+        decisionHandler (WKNavigationResponsePolicyAllow);
+    }else {
+     
+        NSLog(@"111");
+        decisionHandler(WKNavigationResponsePolicyCancel);
+    }
+}
+
+
 
 
 @end
